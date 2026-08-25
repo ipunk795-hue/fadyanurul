@@ -1,57 +1,91 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Unaa Namage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Looking for a date ❤️</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#e9ebee;color:#111}
-.page{max-width:700px;margin:auto;background:#fff;min-height:100vh}
-.header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid #ddd;position:sticky;top:0;background:#fff;z-index:5}
-.header-title{font-size:21px;font-weight:700}.back{font-size:40px}.search{width:28px;height:28px;border:3px solid;border-radius:50%;position:relative}.search:after{content:"";position:absolute;width:12px;height:3px;background:#111;right:-9px;bottom:-5px;transform:rotate(45deg)}
-.profile{display:flex;align-items:center;padding:16px}.profile img{width:56px;height:56px;border-radius:50%;object-fit:cover;margin-right:12px}.name{font-weight:700;font-size:18px}.name span{font-weight:400}.time{font-size:13px;color:#777;margin-top:4px}.more{margin-left:auto;color:#777;font-size:22px}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:2px}.gallery img{width:100%;height:330px;object-fit:cover;display:block}
-.small{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}.small .photo{position:relative}.small img{width:100%;height:220px;object-fit:cover;display:block}.overlay{position:absolute;inset:0;background:#0008;color:#fff;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700}
-.card{padding:17px;border-bottom:1px solid #ddd}.domain{font-size:13px;color:#777;margin-bottom:7px}.row{display:flex;align-items:center;gap:12px}.title{font-size:19px;font-weight:700;flex:1}.cta{border:0;border-radius:7px;padding:13px 16px;background:#1877f2;color:white;font-weight:700;font-size:14px;cursor:pointer}
-.reactions{padding:11px 17px;border-bottom:1px solid #ddd;color:#555}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:10px}.action{border:0;border-radius:22px;padding:11px;background:#f0f2f5;cursor:pointer}
-@media(max-width:600px){.gallery img{height:280px}.small img{height:170px}.title{font-size:16px}.cta{padding:11px 12px}}
+html,body{width:100%;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:#fff}
+.container{width:100%;max-width:1100px;margin:auto;background:#fff}
+.gallery{width:100%;display:grid;grid-template-columns:2fr 1fr;gap:3px;background:#fff}
+.main-photo{width:100%;height:620px;overflow:hidden;text-decoration:none}
+.main-photo img,.side-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.side-photos{height:620px;display:grid;grid-template-rows:repeat(3,1fr);gap:3px}
+.side-photo{position:relative;overflow:hidden;text-decoration:none}
+.more-photos::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.more-number{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:72px;font-weight:bold}
+.info-box{width:100%;padding:28px 34px;background:#fff;border-bottom:1px solid #ddd}
+.domain{color:#6b7280;font-size:23px;margin-bottom:18px}
+.bottom-content{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.title{color:#111827;font-size:42px;font-weight:700;line-height:1.2}
+.open-button{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;background:#fff;color:#333;border:2px solid #555;border-radius:10px;font-size:22px;font-weight:bold;text-decoration:none;white-space:nowrap;transition:.2s}
+.open-button:hover{background:#f1f1f1;transform:scale(1.02)}
+.reaction-box{padding:15px 30px;border-bottom:1px solid #ddd;color:#555;font-size:20px}
+.actions{display:flex;border-bottom:1px solid #ddd}
+.action{width:33.33%;padding:18px;text-align:center;font-size:30px;color:#444;cursor:pointer}
+.action:hover{background:#f5f5f5}
+
+@media(max-width:700px){
+  .main-photo,.side-photos{height:520px}
+  .info-box{padding:22px 18px}
+  .domain{font-size:16px}
+  .title{font-size:25px}
+  .open-button{padding:14px 16px;font-size:15px}
+  .more-number{font-size:55px}
+  .reaction-box{padding:15px 20px}
+  .action{font-size:25px}
+}
+@media(max-width:420px){
+  .main-photo,.side-photos{height:450px}
+  .bottom-content{gap:12px}
+  .title{font-size:21px}
+  .open-button{font-size:12px;padding:12px 13px}
+}
 </style>
 </head>
+
 <body>
-<div class="page">
-<header class="header"><div class="back">‹</div><div class="header-title">Unaa Namage</div><div class="search"></div></header>
+<div class="container">
 
-<div class="profile">
-<img src="https://www.imghippo.com/i/wM9008Nw.jpg" alt="Profile">
-<div><div class="name">Raoul Langworth <span>bersama 91 lainnya.</span></div><div class="time">14 jam · 🌐</div></div>
-<div class="more">•••</div>
-</div>
+  <div class="gallery">
+    <a class="main-photo" href="https://example.com" target="_blank" rel="noopener noreferrer">
+      <img src="https://res.cloudinary.com/hbxvgv4e/image/upload/c_fill,w_900,h_900,g_auto/f_auto,q_auto/1000108400" alt="Preview">
+    </a>
 
-<div class="gallery">
-<img src="https://www.imghippo.com/i/wM9008Nw.jpg" alt="">
-<img src="https://www.imghippo.com/i/PjJ2734vN.jpg" alt="">
-</div>
+    <div class="side-photos">
+      <a class="side-photo" href="https://example.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://res.cloudinary.com/hbxvgv4e/image/upload/c_fill,w_500,h_400,g_auto/f_auto,q_auto/1000108400" alt="">
+      </a>
+      <a class="side-photo" href="https://example.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://res.cloudinary.com/hbxvgv4e/image/upload/c_fill,w_500,h_400,g_auto/f_auto,q_auto/1000108400" alt="">
+      </a>
+      <a class="side-photo more-photos" href="https://example.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://res.cloudinary.com/hbxvgv4e/image/upload/c_fill,w_500,h_400,g_auto/f_auto,q_auto/1000108400" alt="">
+        <div class="more-number">+9</div>
+      </a>
+    </div>
+  </div>
 
-<div class="small">
-<div class="photo"><img src="https://www.imghippo.com/i/OoNG4803yXU.jpg" alt=""></div>
-<div class="photo"><img src="https://www.imghippo.com/i/kyP8738noo.jpg" alt=""><div class="overlay">+99</div></div>
-</div>
+  <div class="info-box">
+    <div class="domain">EXCLUSIVEDATING.PAGE.GD</div>
+    <div class="bottom-content">
+      <div class="title">Looking for a date ❤️</div>
+      <a class="open-button" href="https://lena-86y2.fumifun.sbs/ke2yue" target="_blank" rel="noopener noreferrer">
+        BUKA TAUTAN
+      </a>
+    </div>
+  </div>
 
-<div class="card">
-<div class="domain">VIDEOS.COM</div>
-<div class="row">
-<div class="title">☎️ PRIVATE DATING PARTNER</div>
-<button class="cta" onclick="window.location.href='https://lena-86y2.fumifun.sbs/ke2yue'">BUKA TAUTAN</button>
-</div>
-</div>
+  <div class="reaction-box">👍 7</div>
 
-<div class="reactions">👍 ❤️ &nbsp; 23</div>
-<div class="actions">
-<button class="action" onclick="this.innerHTML='👍 24'">👍 23</button>
-<button class="action">💬</button>
-<button class="action" onclick="navigator.share ? navigator.share({title:'Private Dating Partner',url:location.href}) : alert('Link siap dibagikan')">↗️</button>
-</div>
+  <div class="actions">
+    <div class="action">👍</div>
+    <div class="action">💬</div>
+    <div class="action">↗️</div>
+  </div>
+
 </div>
 </body>
 </html>
